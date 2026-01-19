@@ -82,7 +82,10 @@ public class circularqueue {
         q.display(); //   2 3 4 5
         q.push(6);
         q.display(); // 6 2 3 4 5 -> 2 3 4 5 6
-        q.push(7);
+        // q.push(7);
+        for (int i = 0; i < q.arr.length; i++) {
+            System.out.print(q.arr[i] + " "); // 6 2 3 4 5
+        }
 
     }
 }
