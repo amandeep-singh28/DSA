@@ -10,7 +10,9 @@ public class basicSTL {
         q.offer(20);
         q.offer(30);
         q.add(40);
+        System.out.println(q);
         System.out.println(q.element());
+        System.out.println(q.peek());
         System.out.println(q.size());
         System.out.println(q);
         System.out.println(q.isEmpty());
