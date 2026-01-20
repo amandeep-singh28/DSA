@@ -46,9 +46,6 @@ public class firstNegativeNumberWindow {
                 if (q1.size() > 0 && q1.peek() <= i + k - 1) {
                     res[i] = arr[q1.peek()];
                 }
-                else if (q1.size() == 0) {
-                    res[i] = 0;
-                }
                 else {
                     res[i] = 0;
                 }
