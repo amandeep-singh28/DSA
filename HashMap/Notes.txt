@@ -1,0 +1,42 @@
+****Hashing****
+Arbitary sized key -> Small Key(Hashed Key) with the help of some hash functions
+For example:- 9876589 -> 17 (Hashed Key)
+It gives hashed key for strings also
+
+****Properties****
+(i)For every same input we get the same output everytime.
+(ii)A perfect hash function always produces unique key for unique output.
+    Non-perfect hash function -> It means that it is giving same output for two or more inputs{Collision}
+
+****Working****
+(i)Every KEY is passed to some hash functions to generate hashed key.
+(ii)According to the hashed key, <key,value> pairs are stored in the hash table.
+
+****Types of Hash Functions****
+(i)Division Method
+(ii)Mid Square Method
+(iii)Digit Folding Method
+(iv)Multiplication Method
+
+****Collision****
+There is a chance, that for some key hash function can result in same hashed value. This is known as collision.
+But the hash table which we were making it is of ARRAY OF NODES <KEY,VALUE>, so if a hashed value is repeated than we will not be able to store it because at one hashed value we can only store one value.
+
+****Collision Resolution Techniques****
+(i)Chaining(Open Hashing)
+(ii)Open Addressing (Closed Hashing)
+    (a)Linear Probing
+    (b)Quadratic Probing
+    (c)Double Hashing
+
+****Open Hashing****
+Now in this case we create hashtable on the basis of ARRAY OF LINKED LIST OF NODES. So if a hashed value is repeated than it is linked to that key at that hashed value.
+
+****Problem in Open Hashing****
+Traversal problem -> Time Complexity O(n)
+If we want to find an element, we have to traverse through the linked list.
+
+****Solution****
+Load Factor concept -> In this we double the hash table size to solve the problem of the time complexity. We want minimum collision and maintain constant time complexity.
+By default the load factor is 75% of capacity.
+Suppose the capacity is 100 -> It means that we can easily insert the elements till 0.75, after that we have to double the size of the hashtable to avoid collision and to get constant time complexity. 
