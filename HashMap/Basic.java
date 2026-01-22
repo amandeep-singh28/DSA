@@ -1,6 +1,14 @@
 import java.util.HashMap;
 
 public class Basic {
+    static void nullKeyValue() {
+        HashMap<String, Integer> hm = new HashMap<>();
+        hm.put("",20);
+        hm.put("abc",null);
+        hm.put("pqr",null);
+        hm.put("xyz",null);
+        System.out.println(hm);
+    }
     public static void main(String[] args) {
         // Syntax
         HashMap<String, Integer> mp = new HashMap<>();
@@ -45,5 +53,7 @@ public class Basic {
         for (var e : mp.entrySet()) {
             System.out.printf("Age of %s is %d\n", e.getKey(), e.getValue());
         }
+
+        nullKeyValue();
     }
 }
