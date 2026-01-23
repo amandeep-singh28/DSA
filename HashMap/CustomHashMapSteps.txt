@@ -95,3 +95,17 @@ Same functionality
             return null; // if key doesn't exists
         }
 
+->REHASHING
+If n >= threshold value, than it is required to do the rehashing.
+We have to create new bucket with length (previous bucket * 2) and then intialize this new bucket with the empty linked list nodes like we have done previously and than we need to copy the elements from the previous bucket to the newly created bucket.
+    private void reHash() {
+            LinkedList<Node>[] oldBuckets = buckets;
+            initBuckets(oldBuckets.length * 2);
+            n = 0;
+            for (var bucket : oldBuckets) {
+                for (var node : bucket) {
+                    put(node.key, node.value);
+                }
+            }
+        }
+        
