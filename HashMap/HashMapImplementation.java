@@ -40,8 +40,27 @@ public class HashMapImplementation {
              
         }
 
+        private void reHash() {
+            LinkedList<Node>[] oldBuckets = buckets;
+            initBuckets(oldBuckets.length * 2);
+            n = 0;
+            for (var bucket : oldBuckets) {
+                for (var node : bucket) {
+                    put(node.key, node.value);
+                }
+            }
+        }
+
         public MyHashMap() {
             initBuckets(DEFAULT_CAPACITY);
+        }
+
+        public int capacity() {
+            return buckets.length;
+        }
+
+        public float load() {
+            return (n * 1.0f) / buckets.length;
         }
 
         public int size() { // return the number of entries in map
@@ -59,6 +78,9 @@ public class HashMapImplementation {
             } else { // Update case
                 Node currNode = currBucket.get(ei);
                 currNode.value = value;
+            }
+            if (n >= buckets.length * DEFAULT_LOAD_FACTOR) {
+                reHash();
             }
         }
 
@@ -94,21 +116,27 @@ public class HashMapImplementation {
         mp.put("a", 1);
         mp.put("b", 2);
         mp.put("c", 3);
+        mp.put("x", 61);
+        mp.put("y", 71);
         System.out.println("Testing size " + mp.size());
         mp.put("c", 30);
         System.out.println("Testing size " + mp.size());
 
 
         //Testing get
-        System.out.println(mp.get("a")); // 1
-        System.out.println(mp.get("b")); // 2
+        System.out.println(mp.get("x")); 
+        System.out.println(mp.get("y")); 
         System.out.println(mp.get("c")); // 30
         System.out.println(mp.get("d")); // null
-        
+
         //Testing remove
         System.out.println(mp.remove("c")); // 30
         System.out.println(mp.remove("c")); // null
         System.out.println(mp.size()); // 2
+
+        //Testing Capacity and Load
+        System.out.println("Capacity " + mp.capacity());
+        System.out.println("Load Factor " + mp.load());
         
     }
 }
