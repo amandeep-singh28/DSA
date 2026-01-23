@@ -50,3 +50,10 @@ where i -> Number of attempts
 ****Quadratic Probing Working****
 Instead of putting the element in linear fashion, we put the element in quadratic way.
 H(k) + i^2 % Method
+
+****Double Hashing Working****
+Instead of moving step by step or in a quadratic fashion, it uses two hash functions to decide the next position. If a collision occurs it uses second hash function to decide how far to jump.
+[H1(K) + i * H2(k)] % M
+where H1(k) = K % M
+      H2(k) =  i + (K % N(where n(Prime number) < M))
+      
