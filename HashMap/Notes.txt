@@ -47,3 +47,6 @@ Instead of putting the elements in the linked list manner, we put the collision 
 H(k) + i % M
 where i -> Number of attempts
 
+****Quadratic Probing Working****
+Instead of putting the element in linear fashion, we put the element in quadratic way.
+H(k) + i^2 % Method
