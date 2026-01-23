@@ -39,4 +39,11 @@ If we want to find an element, we have to traverse through the linked list.
 ****Solution****
 Load Factor concept -> In this we double the hash table size to solve the problem of the time complexity. We want minimum collision and maintain constant time complexity.
 By default the load factor is 75% of capacity.
-Suppose the capacity is 100 -> It means that we can easily insert the elements till 0.75, after that we have to double the size of the hashtable to avoid collision and to get constant time complexity. 
+Suppose the capacity is 100 -> It means that we can easily insert the elements till 0.75, after that we have to double the size of the hashtable to avoid collision and to get constant time complexity.
+
+
+****Linear Probing Working****
+Instead of putting the elements in the linked list manner, we put the collision element at the next available index.
+H(k) + i % M
+where i -> Number of attempts
+
