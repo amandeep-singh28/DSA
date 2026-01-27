@@ -10,11 +10,12 @@ public class Isomorphic {
             if (mp.containsKey(sCh)) {
                 if (mp.get(sCh) != tCh) {
                     return false;
-                } else if (mp.containsValue(tCh)) {
-                    return false;
-                } else {
-                    mp.put(sCh, tCh);
                 }
+            }
+            else if (mp.containsValue(tCh)) {
+                return false;
+            } else {
+                mp.put(sCh, tCh);
             }
         }
         return true;
