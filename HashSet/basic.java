@@ -1,6 +1,6 @@
 package HashSet;
 import java.util.HashSet;
-
+// It stores only key unlike HashMap was storing key-value pairs rest all is same
 public class basic {
     public static void main(String[] args) {
         HashSet<String> st = new HashSet<>();
