@@ -1,0 +1,19 @@
+(i)Internal Node
+Node which is not leaf node and not root node
+
+(ii)Ancestor Node
+Suppose the path is 3-4-2-1, than the ancestor for node 3 will be 4, 2 and 1
+
+(iii)Descendant Node
+Node 2 Descendant
+Every child below node 2 will be Descendant of node 2.
+
+(iv)Edges -> Number of nodes  - 1
+
+(v)Height
+In the form of edges and nodes.
+
+(vi)Sub-Tree
+->Left Sub Tree
+->Right Sub Tree
+
