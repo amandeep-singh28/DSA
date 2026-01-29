@@ -17,3 +17,25 @@ In the form of edges and nodes.
 ->Left Sub Tree
 ->Right Sub Tree
 
+****Important Properties of Trees****
+(i)Taversing in a tree is done by DFS and BFS algorithm.
+(ii)It has no loop and no circuit.
+(iii)It has no self-loop.
+
+****Types Of Trees*
+(i)Generic Trees
+1 Root and n children
+Each node can have any number of child nodes
+
+(ii)Binary Trees
+Each node can have atmost 2 child nodes.(not more than 2)
+Root -> Left Child and Right Child
+
+(iii)Binary Search Trees
+Each node can have atmost 2 child nodes.(not more than 2)
+Root -> Left Child and Right Child.
+It has every node to the left of a node is smaller and every node to the right has a greater value.
+For every node the nodes for the left sub tree will be smaller and vice versa.
+
+(iv)AVL Tree
+Balanced search tree.
