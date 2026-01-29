@@ -23,7 +23,21 @@ public class revision {
         displayReverse(head.next);
         System.out.print(head.data + " ");
     }
-    
+    public static Node displayReverseIterative(Node head) {
+        Node prev = head;
+        Node curr = prev.next;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = prev;
+            // Updating Links
+            prev = curr;
+            curr = next;
+        }
+        // head update
+        head.next = null;
+        head = prev;
+        return head;
+    }
     public static void main(String[] args) {
         Node a = new Node(10);
         Node b = new Node(20);
@@ -35,6 +49,9 @@ public class revision {
         c.next = d; // 10 -> 20 -> 30 -> 40
 
         // displayRecursive(a);
-        displayReverse(a);3
+        // displayReverse(a);
+        Node new_head = displayReverseIterative(a);
+        display(new_head);
+        
     }
 }
