@@ -36,26 +36,35 @@ public class sizeMaxSumHeight {
         return Math.max(a, Math.max(b, c));
         
     }
-    
+    public static int edgeHeight(Node root) {
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return 0;
+        return (1 + Math.max(edgeHeight(root.left), edgeHeight(root.right)));
+    }
     public static void main(String[] args) {
-        Node root = new Node(-1);
-        Node a = new Node(-2);
-        Node b = new Node(-3);
+        Node root = new Node(1);
+        Node a = new Node(4);
+        Node b = new Node(7);
 
         root.left = a;
         root.right = b;
 
-        Node c = new Node(-47);
-        Node d = new Node(-5);
+        Node c = new Node(2);
+        Node d = new Node(5);
 
         a.left = c;
         a.right = d;
 
-        Node e = new Node(-6);
+        Node e = new Node(8);
         b.right = e;
+
+        Node f = new Node(9);
+        e.left = f;
+
         System.out.println(size(root));
         System.out.println(sum(root));
         System.out.println(maximum(root));
         System.out.println(maximumNegative(root));
+        System.out.println(edgeHeight(root));
     }
 }
