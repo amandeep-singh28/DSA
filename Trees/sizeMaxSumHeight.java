@@ -21,31 +21,41 @@ public class sizeMaxSumHeight {
         return 1 + size(root.left) + size(root.right);
     }
     public static int maximum(Node root) {
-        if (root == null) return 0;
+        if (root == null) return 0; // This thing will not work for the negative values, because whenever we will get leaf node 0 will be returned and when we will compare 0 with other negative values, 0 will become the greatest and 0 will be returned
         int a = root.val;
         int b = maximum(root.left);
         int c = maximum(root.right);
         return Math.max(a, Math.max(b, c));
         
     }
+    public static int maximumNegative(Node root) {
+        if (root == null) return Integer.MIN_VALUE; // FIX
+        int a = root.val;
+        int b = maximumNegative(root.left);
+        int c = maximumNegative(root.right);
+        return Math.max(a, Math.max(b, c));
+        
+    }
+    
     public static void main(String[] args) {
-        Node root = new Node(1);
-        Node a = new Node(2);
-        Node b = new Node(3);
+        Node root = new Node(-1);
+        Node a = new Node(-2);
+        Node b = new Node(-3);
 
         root.left = a;
         root.right = b;
 
-        Node c = new Node(47);
-        Node d = new Node(5);
+        Node c = new Node(-47);
+        Node d = new Node(-5);
 
         a.left = c;
         a.right = d;
 
-        Node e = new Node(6);
+        Node e = new Node(-6);
         b.right = e;
         System.out.println(size(root));
         System.out.println(sum(root));
         System.out.println(maximum(root));
+        System.out.println(maximumNegative(root));
     }
 }
