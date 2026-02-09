@@ -11,7 +11,8 @@ public class numberOfProvinces {
 
         for (int i = 0; i < n; i++) {
             if (visited[i] == false) {
-                bfs(i, adj, visited);
+                // bfs(i, adj, visited);
+                dfs(i, adj, visited);
                 count++;
             }
         }
@@ -31,6 +32,16 @@ public class numberOfProvinces {
                     visited[j] = true;
                 }
             }
+        }
+    }
+    private static void dfs(int i, int[][] adj, boolean[] visited) {
+        int n = adj.length;
+        visited[i] = true;
+        for (int j = 0; j < n; j++) {
+                if (adj[i][j] == 1 && visited[j] == false) {
+                    dfs(j, adj, visited);
+                }
+
         }
     }
     public static void main(String[] args) {
