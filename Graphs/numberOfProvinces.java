@@ -11,8 +11,8 @@ public class numberOfProvinces {
 
         for (int i = 0; i < n; i++) {
             if (visited[i] == false) {
-                // bfs(i, adj, visited);
-                dfs(i, adj, visited);
+                bfs(i, adj, visited);
+                // dfs(i, adj, visited);
                 count++;
             }
         }
