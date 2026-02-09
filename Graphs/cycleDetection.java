@@ -35,7 +35,19 @@ public class cycleDetection {
         boolean vis[] = new boolean[V];
         for (int i = 0; i < V; i++) {
             if (vis[i] == false) {
-                if (bfs(i, list, vis) == true) return true;
+                // if (bfs(i, list, vis) == true) return true;
+                if (dfs(i, -1, list, vis) == true) return true;
+            }
+        }
+        return false;
+    }
+    public boolean dfs(int start, int parent, List<List<Integer>> list, boolean vis[]) {
+        vis[start] = true;
+        for (var child : list.get(start)) {
+            if (vis[child] == false) {
+                if (dfs(child, start, list, vis) == true) return true;
+            } else if (vis[child] == true && child != parent) {
+                return true;
             }
         }
         return false;
