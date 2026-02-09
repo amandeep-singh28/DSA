@@ -21,11 +21,21 @@ public class keysAndRooms {
             }
         }
 
+        public void dfs(int start, List<List<Integer>> adj, boolean[] visited) {
+        visited[start] = true;
+        for (var element : adj.get(start)) {
+            if (visited[element] == false) {
+                dfs(element, adj, visited);
+            }
+        }
+    }
+
         public boolean canVisitAllRooms(List<List<Integer>> adj) {
             int n = adj.size();
             boolean[] visited = new boolean[n];
             visited[0] = true;
-            bfs(0, adj, visited);
+            // bfs(0, adj, visited);
+            dfs(0, adj, visited);
             for (var element : visited) {
                 if (element == false)
                     return false;
