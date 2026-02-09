@@ -20,6 +20,16 @@ public class pathExists {
             }
         }
     }
+
+    public void dfs(int start, List<List<Integer>> list, boolean[] visited, int end) {
+        visited[start] = true;
+        for (var element : list.get(start)) {
+            if (visited[element] == false) {
+                dfs(element, list, visited, end);
+            }
+        }
+    }
+
     public boolean validPath(int n, int[][] edges, int start, int end) {
         if (start == end) return true;
         boolean visited[] = new boolean[n];
@@ -36,7 +46,8 @@ public class pathExists {
             list.get(a).add(b);
             list.get(b).add(a);
         }
-        bfs(start, list, visited, end);
+        // bfs(start, list, visited, end);
+        dfs(start, list, visited, end);
         return visited[end];
     }
     public static void main(String[] args) {
