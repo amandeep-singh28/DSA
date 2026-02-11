@@ -5,10 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+// In kahn's algorithm there is no need for visited array
+
 public class cycleDetectionDG {
     public boolean canFinish(int n, int[][] edges) {
         int indegree[] = new int[n];
-        boolean vis[] = new boolean[n];
+        // boolean vis[] = new boolean[n];
         List<List<Integer>> adj = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
@@ -24,10 +26,10 @@ public class cycleDetectionDG {
         Queue<Integer> q = new LinkedList<>();
         List<Integer> ans = new ArrayList<>();
 
-        for (int i = 0; i < vis.length; i++) {
+        for (int i = 0; i < n; i++) {
             if (indegree[i] == 0) {
                 q.add(i);
-                vis[i] = true;
+                // vis[i] = true;
             }
         }
         while (q.size() > 0) {
@@ -37,7 +39,7 @@ public class cycleDetectionDG {
                 indegree[element]--;
                 if (indegree[element] == 0) {
                     q.add(element);
-                    vis[element] = true;
+                    // vis[element] = true;
                 }
             }
         }
