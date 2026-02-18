@@ -28,9 +28,32 @@ public class pathWithMinEffort {
                 ans[i][j] = Integer.MAX_VALUE;
             }
         }
+
+        int r[] = {-1, 0, 1, 0};
+        int c[] = {0, -1, 0, 1};
+
         ans[0][0] = 0;
         PriorityQueue<Triplet> pq = new PriorityQueue<>();
         pq.add(new Triplet(0, 0, 0));
+        
+        while (pq.size() > 0) {
+            Triplet top = pq.remove();
+            int row = top.row;
+            int col = top.col;
+            int effort = top.effort;
+
+            for (int i = 0; i <= 3; i++) {
+                int newRow = row + r[i];
+                int newCol = col + c[i];
+                if (newRow < 0 || newCol < 0 || newRow > m - 1 || newCol > n - 1) continue;
+                int e = Math.abs(arr[newRow][newCol] - arr[newRow][newCol]);
+                e = Math.max(e, effort);
+                if (e < ans[newRow][newCol]) {
+                    ans[newRow][newCol] = e;
+                    pq.add(new Triplet(newRow, newCol, e));
+                }
+            }
+        }
 
         while (pq.size() > 0) {
             Triplet top = pq.remove();
