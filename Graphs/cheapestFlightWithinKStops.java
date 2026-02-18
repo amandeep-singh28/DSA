@@ -1,10 +1,13 @@
+// Note :- If we will sort this graph on the basis of the cost, than it will always take the minimum cost which is incorrect. If suppose the choosen path result in the maximum cost than our algorithm will not work as per the question. That's why we have to do the sorting according the stops or we can simply perform via Queue(w/o Comparable class logic) 
+
+
 package Graphs;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.PriorityQueue;
+// import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class cheapestFlightWithinKStops {
