@@ -1,9 +1,11 @@
 package Graphs;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class cheapestFlightWithinKStops {
     class Pair {
@@ -46,7 +48,8 @@ public class cheapestFlightWithinKStops {
         Arrays.fill(ans, Integer.MAX_VALUE);
         ans[src] = 0;
 
-        PriorityQueue<Triplet> pq = new PriorityQueue<>();
+        // PriorityQueue<Triplet> pq = new PriorityQueue<>();
+        Queue<Triplet> pq = new ArrayDeque<>();
         pq.add(new Triplet(src, 0, 0));
 
         while (pq.size() > 0) {
