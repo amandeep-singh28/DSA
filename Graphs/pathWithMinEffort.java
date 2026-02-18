@@ -46,7 +46,7 @@ public class pathWithMinEffort {
                 int newRow = row + r[i];
                 int newCol = col + c[i];
                 if (newRow < 0 || newCol < 0 || newRow > m - 1 || newCol > n - 1) continue;
-                int e = Math.abs(arr[newRow][newCol] - arr[newRow][newCol]);
+                int e = Math.abs(arr[row][col] - arr[newRow][newCol]);
                 e = Math.max(e, effort);
                 if (e < ans[newRow][newCol]) {
                     ans[newRow][newCol] = e;
