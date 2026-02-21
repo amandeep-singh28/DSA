@@ -3,7 +3,9 @@ package Graphs;
 public class disjointSetUnion {
     public static int find(int a, int[] parent) {
         if (parent[a] == a) return a;
-        return find(parent[a], parent);
+        int leader = find(parent[a], parent);
+        parent[a] = leader;
+        return leader;
     }
     public static void union(int a, int b, int[] parent, int[] size) {
         int leaderA = find(a, parent);
