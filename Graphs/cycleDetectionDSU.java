@@ -14,7 +14,6 @@ public class cycleDetectionDSU {
     }
     public int[] findRedundantConnection(int[][] edges) {
         int n = edges.length;
-        int m = edges[0].length;
 
         int ans[] = new int[2];
         int parent[] = new int[n + 1];
