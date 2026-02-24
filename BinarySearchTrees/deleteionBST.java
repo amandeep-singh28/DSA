@@ -72,6 +72,16 @@ public class deleteionBST {
                     } else {
                         root.right = root.right.right;
                     }
+                } else {
+                    Node curr = root.right;
+                    Node pred = curr.left;
+                    while (pred.right != null) {
+                        pred = pred.right;
+                    }
+                    delete(root, pred.val);
+                    pred.left = curr.left;
+                    pred.right = curr.right;
+                    root.right = pred;
                 }
             } else
                 delete(root.right, target);
@@ -87,6 +97,16 @@ public class deleteionBST {
                     } else {
                         root.left = root.left.right;
                     }
+                } else {
+                    Node curr = root.left;
+                    Node pred = curr.left;
+                    while (pred.right != null) {
+                        pred = pred.right;
+                    }
+                    delete(root, pred.val);
+                    pred.left = curr.left;
+                    pred.right = curr.right;
+                    root.left = pred;
                 }
             } else
                 delete(root.left, target);
