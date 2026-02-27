@@ -28,6 +28,12 @@ public class traversal {
         System.out.print(root.val + " ");
         inorderTraversal(root.right);
     }
+    public static void reverseInorderTraversal(Node root) {
+        if (root == null) return;
+        reverseInorderTraversal(root.right);
+        System.out.print(root.val + " ");
+        reverseInorderTraversal(root.left);
+    }
     public static void main(String[] args) {
         Node root = new Node(10);
         Node a = new Node(5);
@@ -50,6 +56,8 @@ public class traversal {
         postorderTraversal(root);
         System.out.println();
         inorderTraversal(root);
+        System.out.println();
+        reverseInorderTraversal(root);
 
     }
 }
