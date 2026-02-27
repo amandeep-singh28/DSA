@@ -1,9 +1,13 @@
 package BinarySearchTrees;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class findPredSuc {    
+
+public class findPredSuc {
+    static Node temp = null;    
+    static int pred = -1;
+    static int succ = -1;
+    static boolean flag = false;
+
     public static class Node {
         int val;
         Node left;
@@ -12,11 +16,22 @@ public class findPredSuc {
             this.val = val;
         }
     }
-    public static void inorder(Node root, List<Integer> list) {
+    public static void inorder(Node root, int val) {
         if (root == null) return;
-        inorder(root.left, list);
-        list.add(root.val);
-        inorder(root.right, list);
+        inorder(root.left, val);
+        if (temp == null) temp = root;
+        else {
+            if (root.val == val) {
+                pred = temp.val;
+                flag = true;
+            } else if (root.val > val && flag == true) {
+                succ = root.val;
+                flag = false;
+            } else {
+                temp = root;
+            }
+        }
+        inorder(root.right, val);
 
     }
     public static void main(String[] args) {
@@ -51,19 +66,10 @@ public class findPredSuc {
         e.left = i;
 
         f.right = j;
-        List<Integer> list = new ArrayList<>();
         
-        inorder(root, list);
-
-        int val = 17;
-        int idx = -1;
-        for (int k = 0; k < list.size(); k++) {
-            if (list.get(k) == val) {
-                idx = k;
-            }
-        }
-        System.out.println(list);
-        System.out.println("Pred: "+ list.get(idx - 1));
-        System.out.println("Suc: "+ list.get(idx + 1));
+        int val = 10;
+        inorder(root, val);
+        System.out.println("Pred: "+ pred);
+        System.out.println("Suc: "+ succ);
     }
 }
