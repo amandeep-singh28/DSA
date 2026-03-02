@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Clone {
     public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -16,7 +18,8 @@ public class Clone {
         System.out.println("Original Array:");
         printArray(arr);
         System.out.println("Copied Array:");
-        int[] arr2 = arr.clone();
+        // int[] arr2 = arr.clone();
+        int[] arr2 = Arrays.copyOf(arr, 3);
         printArray(arr2);
 
         arr2[0] = 0;
