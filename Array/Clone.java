@@ -19,7 +19,8 @@ public class Clone {
         printArray(arr);
         System.out.println("Copied Array:");
         // int[] arr2 = arr.clone();
-        int[] arr2 = Arrays.copyOf(arr, 3);
+        // int[] arr2 = Arrays.copyOf(arr, 3);
+        int[] arr2 = Arrays.copyOfRange(arr, 1, arr.length); // [)
         printArray(arr2);
 
         arr2[0] = 0;
