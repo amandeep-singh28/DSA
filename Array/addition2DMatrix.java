@@ -32,6 +32,24 @@ public class addition2DMatrix {
         }
         System.out.println("Addition of matrix:");
         printArray(r1, c1, ans);
+    }
+    static void multiplyMatrix(int arr1[][], int r1, int c1, int arr2[][], int r2, int c2) {
+        if (c1 != r2) {
+            System.out.println("Multiplication cannot be done!!");
+            return;
+        }
+        int ans[][] = new int[r1][c2];
+
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                for (int k = 0; k < c1; k++) {
+                    ans[i][j] += arr1[i][k] * arr2[k][j];
+                }
+            }
+        }
+        System.out.println("Multiplication of matrix:");
+        printArray(r1, c2, ans);
+
     } 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -51,11 +69,7 @@ public class addition2DMatrix {
         printArray(rows2, cols2, arr2);
 
         additionMatrix(arr1, rows1, cols1, arr2, rows2, cols2);
+        multiplyMatrix(arr1, rows1, cols1, arr2, rows2, cols2);
         sc.close();
-
-        
-        
-        
-        
     }
 }
