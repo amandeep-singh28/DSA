@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class addition2DMatrix {
+public class Matrix2DOperation {
     static void inputArray(int rows, int cols, int arr[][], Scanner sc) {
         System.out.println("Enter matrix values:");
         for (int i = 0; i < rows; i++) {
