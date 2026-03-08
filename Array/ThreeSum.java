@@ -11,15 +11,21 @@ public class ThreeSum {
         Set<List<Integer>> set = new HashSet<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                for (int k = j + 1; k < nums.length; k++) {
-                    if (nums[i] + nums[j] + nums[k] == 0) {
-                        List<Integer> temp = new ArrayList<>();
-                        temp.add(nums[i]);
-                        temp.add(nums[j]);
-                        temp.add(nums[k]);
-                        set.add(temp);
-                    }
+            int left = i + 1;
+            int right = nums.length - 1;
+            while (left < right) {
+                if (nums[left] + nums[right] > -nums[i]) {
+                    right--;
+                }
+                else if (nums[left] + nums[right] < -nums[i]) left++;
+                else {
+                    List<Integer> temp = new ArrayList<>();
+                    temp.add(nums[i]);
+                    temp.add(nums[left]);
+                    temp.add(nums[right]);
+                    set.add(temp);
+                    left++;
+                    right--;
                 }
             }
         }
