@@ -1,9 +1,14 @@
 public class spiralMatrix {
     public static void main(String[] args) {
+        // int arr[][] = {
+        //     {1, 2, 3},
+        //     {4, 5, 6},
+        //     {7, 8, 9}
+        // };
         int arr[][] = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}
         };
 
         int r = arr.length;
@@ -15,28 +20,28 @@ public class spiralMatrix {
         
         while(totalElements < r * c) {
             // topRow -> leftCol - rightCol
-            for (int j = leftCol; j <= rightCol; j++) {
+            for (int j = leftCol; j <= rightCol && totalElements < r * c; j++) {
                 System.out.print(arr[topRow][j] + " ");
                 totalElements++;
             }
             topRow++;
             
             // rightCol -> topRow - bottomRow
-            for (int i = topRow; i <= bottomRow; i++) {
+            for (int i = topRow; i <= bottomRow && totalElements < r * c; i++) {
                 System.out.print(arr[i][rightCol] + " ");
                 totalElements++;
             }
             rightCol--;
 
             // bottomRow -> rightCol - leftCol
-            for (int j = rightCol; j >= leftCol; j--) {
+            for (int j = rightCol; j >= leftCol && totalElements < r * c; j--) {
                 System.out.print(arr[bottomRow][j] + " ");
                 totalElements++;
             }
             bottomRow--;
 
             // leftCol -> bottomRow - topRow
-            for (int i = bottomRow; i >= topRow; i--) {
+            for (int i = bottomRow; i >= topRow && totalElements < r * c; i--) {
                 System.out.print(arr[i][leftCol] + " ");
                 totalElements++;
             }
