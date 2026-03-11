@@ -30,7 +30,7 @@ public class builder {
         System.out.println(str2);
         //amandeep
         str2.delete(0, 4);
-        System.out.println(str2);
-        
+        System.out.println(str2); // deep
+
     }
 }
