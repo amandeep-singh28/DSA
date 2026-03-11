@@ -11,9 +11,11 @@ public class toggleCharacters {
             if (ch >= 'A' && ch <= 'Z') {
                 int ele = ch + 32;
                 str.setCharAt(i, (char)ele);
+                // str = str.substring(0, i) + char(ele) + str.substring(i + 1);
             } else if (ch >= 'a' && ch <= 'z'){
                 int ele = ch - 32;
                 str.setCharAt(i, (char)ele);
+                // str = str.substring(0, i) + char(ele) + str.substring(i + 1);
             }
         }
         System.out.println(str);
