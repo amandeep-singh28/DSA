@@ -7,5 +7,8 @@ public class equals {
         String s3 = new String("Hello");
         System.out.println(s1 == s2); // true -> Same memory address (Interning)
         System.out.println(s1 == s3); // false -> Different memory address
+
+        System.out.println(s1.equals(s2)); // true -> Compares value
+        System.out.println(s1.equals(s3)); // true
     }
 }
