@@ -1,6 +1,6 @@
 package Strings;
 
-public class longRepeatingChar {
+public class longRepeatingCharReplacement {
     public int characterReplacement(String s, int k) {
         int maxLen = 0;
         for (int i = 0; i < s.length(); i++) {
