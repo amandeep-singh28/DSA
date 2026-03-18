@@ -37,7 +37,7 @@ public class subArraysKDifferentInt {
         }
         return count;
     }
-    public int subarraysWithKDistinct(int[] nums, int k) {
+    public int subarraysWithKDistinct1(int[] nums, int k) {
         int count = helper(nums, k);
         int count1 = helper(nums, k - 1);
         return count - count1;
