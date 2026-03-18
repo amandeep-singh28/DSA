@@ -49,4 +49,24 @@ public class longRepeatingCharReplacement {
         }
         return maxLen;
     }
+    public int characterReplacement3(String s, int k) {
+        int right = 0, left = 0, maxLen = 0, maxFreq = 0;
+        int[] freq = new int[26];
+        while (right < s.length()) {
+            freq[s.charAt(right) - 'A']++;
+            maxFreq = Math.max(maxFreq, freq[s.charAt(right) - 'A']);
+            int changes = (right - left + 1) - maxFreq;
+            if (changes > k) {
+                freq[s.charAt(left) - 'A']--;
+                for (int i = 0; i < 26; i++) {
+                    maxFreq = Math.max(maxFreq, freq[i]);
+                }
+                left++;
+            } else {
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
+            right++;
+        }
+        return maxLen;
+    }
 }
