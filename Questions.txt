@@ -1,0 +1,7 @@
+***19-03-2026***
+-Reverse Linked List(#206)
+-Delete nth node from end(#19)
+-Pallindromic Linked List(#234)
+-Linked List Cycle(#141)
+-Delete Node in a Linked List(#237)
+-Intersection of two Linked List(#160)
