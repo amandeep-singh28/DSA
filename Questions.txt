@@ -5,3 +5,5 @@
 -Linked List Cycle(#141)
 -Delete Node in a Linked List(#237)
 -Intersection of two Linked List(#160)
+-Middle of the Linked List(#876)
+-Delete the middle of the Linked List(#2095)
