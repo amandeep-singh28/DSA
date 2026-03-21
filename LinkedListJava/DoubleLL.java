@@ -1,3 +1,4 @@
+package LinkedListJava;
 import java.util.Scanner;
 
 class Node {
