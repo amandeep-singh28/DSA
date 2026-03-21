@@ -7,3 +7,6 @@
 -Intersection of two Linked List(#160)
 -Middle of the Linked List(#876)
 -Delete the middle of the Linked List(#2095)
+-Linked List Cycle 2(#142)
+-Merge two sorted lists(#21)
+-Remove duplicates from Sorted List(#83)
