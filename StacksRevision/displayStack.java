@@ -21,5 +21,20 @@ public class displayStack {
             System.out.print(top + " ");
             st.push(top);
         }
+        
+
+        // (ii) With the help of array
+        System.out.println();
+        int size = st.size();
+        int arr[] = new int[size];
+        for (int i = size - 1; i >= 0; i--) {
+            arr[i] = st.pop();
+        }
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+            st.push(arr[i]);
+        }
+
     }
 }
