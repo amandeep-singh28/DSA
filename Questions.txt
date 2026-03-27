@@ -13,3 +13,10 @@
 -Add two numbers linked list(#2)
 -Merge k sorted lists(#23)
 -Swap Adjacent Pairs Linked List(#24)
+-Rotate List(#61)
+
+***26-03-2026***
+-Valid Parenthesis(#20)
+-Remove all adjacent duplicates in String(#1047)
+-Remove all adjacent duplicates in String II(#1209)
+-Make the String great(#1544)
