@@ -1,4 +1,3 @@
-package LinkedListJava;
 public class mergeKSortedList {
     public class ListNode {
         ListNode next;

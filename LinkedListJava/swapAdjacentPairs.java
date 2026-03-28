@@ -1,4 +1,3 @@
-package LinkedListJava;
 
 public class swapAdjacentPairs {
     public class ListNode {

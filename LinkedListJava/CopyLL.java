@@ -1,4 +1,3 @@
-package LinkedListJava;
 
 class Node {
     int data;
