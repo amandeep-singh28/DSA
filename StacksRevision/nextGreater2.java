@@ -35,6 +35,7 @@ public class nextGreater2 {
         Stack<Integer> st = new Stack<>();
         int len = nums.length;
         int ans[] = new int[len];
+        Arrays.fill(ans, -1);
 
         for (int i = 2 * len - 1; i >= 0; i--) {
             int idx = i % len;
@@ -42,9 +43,7 @@ public class nextGreater2 {
                 st.pop();
             }
             if (i < len) {
-                if (st.size() == 0) {
-                    ans[idx] = -1;
-                } else {
+                if (st.size() != 0) {
                     ans[idx] = st.peek();
                 }
             }
