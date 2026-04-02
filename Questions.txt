@@ -15,6 +15,7 @@
 -Swap Adjacent Pairs Linked List(#24)
 -Rotate List(#61)
 -Remove duplicates from Sorted List II(#82)
+-Partition List(#86)
 
 ***26-03-2026***
 -Valid Parenthesis(#20)
