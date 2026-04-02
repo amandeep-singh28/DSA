@@ -29,6 +29,13 @@ public class creation {
         int c = maxValue(root.right);
         return Math.max(a, Math.max(b, c));
     }
+    public static int heightTree(Node root) {
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return 0;
+        int left = heightTree(root.left);
+        int right = heightTree(root.right);
+        return 1 + Math.max(left, right);
+    }
     public static void main(String[] args) {
         Node a = new Node(-1);
         Node b = new Node(-2);
@@ -46,5 +53,6 @@ public class creation {
         displayTree(a);
         System.out.println("Size of Tree:" + sizeTree(a));
         System.out.println("Maximum Value:" + maxValue(a));
+        System.out.println("Height:" + heightTree(a));
     }
 }
