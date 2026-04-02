@@ -18,6 +18,10 @@ public class creation {
         displayTree(root.left);
         displayTree(root.right);
     }
+    public static int sizeTree(Node root) {
+        if (root == null) return 0;
+        return 1 + sizeTree(root.left) +  sizeTree(root.right);
+    }
     public static void main(String[] args) {
         Node a = new Node(1);
         Node b = new Node(2);
@@ -33,5 +37,6 @@ public class creation {
         c.left = f;
         c.right = g;
         displayTree(a);
+        System.out.println("Size of Tree:" + sizeTree(a));
     }
 }
