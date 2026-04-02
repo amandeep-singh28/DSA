@@ -25,13 +25,7 @@ public class partitionList {
             }
             temp = temp.next;
         }
-
-        ListNode temp3 = lessThanX;
-        while (temp3.next != null) {
-            temp3 = temp3.next;
-        }
-        // greaterThanX = greaterThanX.next;
-        temp3.next = greaterThanX.next;
+        temp1.next = greaterThanX.next;
         return lessThanX.next;
     }
 }
