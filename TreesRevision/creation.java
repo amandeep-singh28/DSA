@@ -23,20 +23,20 @@ public class creation {
         return 1 + sizeTree(root.left) +  sizeTree(root.right);
     }
     public static int maxValue(Node root) {
-        if (root == null) return 0;
+        if (root == null) return Integer.MIN_VALUE;
         int a = root.val;
         int b = maxValue(root.left);
         int c = maxValue(root.right);
         return Math.max(a, Math.max(b, c));
     }
     public static void main(String[] args) {
-        Node a = new Node(1);
-        Node b = new Node(2);
-        Node c = new Node(3);
-        Node d = new Node(4);
-        Node e = new Node(5);
-        Node f = new Node(6);
-        Node g = new Node(7);
+        Node a = new Node(-1);
+        Node b = new Node(-2);
+        Node c = new Node(-3);
+        Node d = new Node(-4);
+        Node e = new Node(-5);
+        Node f = new Node(-6);
+        Node g = new Node(-7);
         a.left = b;
         a.right = c;
         b.left = d;
