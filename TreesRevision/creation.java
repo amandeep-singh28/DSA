@@ -36,6 +36,12 @@ public class creation {
         int right = heightTree(root.right);
         return 1 + Math.max(left, right);
     }
+    public static void printnthlevel(Node root, int n) {
+        if (root == null) return;
+        if (n == 1) System.out.print(root.val + " ");
+        printnthlevel(root.left, n - 1);
+        printnthlevel(root.right, n - 1);
+    }
     public static void main(String[] args) {
         Node a = new Node(-1);
         Node b = new Node(-2);
@@ -54,5 +60,11 @@ public class creation {
         System.out.println("Size of Tree:" + sizeTree(a));
         System.out.println("Maximum Value:" + maxValue(a));
         System.out.println("Height:" + heightTree(a));
+
+        int height = heightTree(a) + 1;
+        for (int i = 1; i <= height; i++) {
+            printnthlevel(a, i);
+            System.out.println();
+        }
     }
 }
