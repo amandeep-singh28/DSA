@@ -1,4 +1,4 @@
-***19-03-2026***
+->Linked List Revision Questions
 -Reverse Linked List(#206)
 -Delete nth node from end(#19)
 -Pallindromic Linked List(#234)
@@ -17,7 +17,7 @@
 -Remove duplicates from Sorted List II(#82)
 -Partition List(#86)
 
-***26-03-2026***
+->Stack Revision Questions
 -Valid Parenthesis(#20)
 -Remove all adjacent duplicates in String(#1047)
 -Remove all adjacent duplicates in String II(#1209)
