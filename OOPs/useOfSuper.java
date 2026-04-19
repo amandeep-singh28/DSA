@@ -1,24 +1,20 @@
 package OOPs;
 
 class ABC {
-    String name = "Amandeep Singh";
-    void display() {
-        System.out.println("ABC class");
+    ABC() {
+        System.out.println("ABC Class");
     }
 }
 
 class XYZ extends ABC {
-    String name = "Amandeep";
-    void display() {
-        super.display();
-        System.out.println(name);
-        System.out.println(super.name);
+    XYZ() {
+        super();
+        System.out.println("XYZ Class");
     }
 }
 
 public class useOfSuper {
     public static void main(String[] args) {
         XYZ obj1 = new XYZ();
-        obj1.display();
     }
 }
