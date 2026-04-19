@@ -1,0 +1,50 @@
+->Constructor Working in Inheritance
+(i)Java internally called parent class everytime even if we don't write super().
+(ii)If there are only default constructor present in the both the classes, than first parent class default constructor will run and than child class default constructor.
+(iii)super() must be the first statement inside the default constructor of the child class.
+(iv)super() must not be written twice.
+(v)If the parent class is having parameterized constructor than we need to specify super() in the child class constructor and also in the parameters inside the super() keyword
+
+Example:-
+
+class Student {
+    Student() { // Default Constructor
+        System.out.println("Parent class");
+    }
+}
+
+class Hostel extends Student {
+    Hostel() { // Default Constructor
+        // super()
+        System.out.println("Child class");
+    }
+}
+
+public class constructorWorking {
+    public static void main(String[] args) {
+        Hostel h1 = new Hostel();
+    }
+}
+
+Example:-
+
+package OOPs;
+
+class Student {
+    Student(int x) {
+        System.out.println("Parent class");
+    }
+}
+
+class Hostel extends Student {
+    Hostel(String a) {
+        super(10);
+        System.out.println("Child class");
+    }
+}
+
+public class constructorWorking {
+    public static void main(String[] args) {
+        Hostel h1 = new Hostel("Hello");       
+    }
+}
