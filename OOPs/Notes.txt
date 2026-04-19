@@ -4,6 +4,7 @@
 (iii)super() must be the first statement inside the default constructor of the child class.
 (iv)super() must not be written twice.
 (v)If the parent class is having parameterized constructor than we need to specify super() in the child class constructor and also in the parameters inside the super() keyword
+(vi)In case of default constructor super() is automatically called.
 
 Example:-
 
