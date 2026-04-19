@@ -60,3 +60,8 @@ public class constructorWorking {
 (ii)Method overloading
 -Same function name and different parameters.
 -Can be done in the same class.
+
+
+->Uses of super()
+(i)It can access the overriden methods
+(ii)
