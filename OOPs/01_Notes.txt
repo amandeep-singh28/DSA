@@ -64,4 +64,101 @@ public class constructorWorking {
 
 ->Uses of super()
 (i)It can access the overriden methods
-(ii)
+Example:-
+
+class ABC {
+    void display() {
+        System.out.println("ABC class");
+    }
+}
+
+class XYZ extends ABC {
+    void display() {
+        super.display();
+        System.out.println("XYZ class");
+    }
+}
+
+public class useOfSuper {
+    public static void main(String[] args) {
+        XYZ obj1 = new XYZ();
+        obj1.display();
+    }
+}
+
+(ii)It can access public data members of the parent class
+
+Example:-
+
+class ABC {
+    String name = "Amandeep Singh";
+    void display() {
+        System.out.println("ABC class");
+    }
+}
+
+class XYZ extends ABC {
+    String name = "Amandeep";
+    void display() {
+        super.display();
+        System.out.println(name);
+        System.out.println(super.name);
+    }
+}
+
+public class useOfSuper {
+    public static void main(String[] args) {
+        XYZ obj1 = new XYZ();
+        obj1.display();
+    }
+}
+
+(iii)It can call the default constructor of the parent class.
+-super() must be the first statement inside the child class default constructor
+
+Example:-
+
+class ABC {
+    ABC() {
+        System.out.println("ABC Class");
+    }
+}
+
+class XYZ extends ABC {
+    XYZ() {
+        super();
+        System.out.println("XYZ Class");
+    }
+}
+
+public class useOfSuper {
+    public static void main(String[] args) {
+        XYZ obj1 = new XYZ();
+    }
+}
+
+(iv)To access the parameterized constructor of the parent class
+
+Example:-
+
+class ABC {
+    ABC() {
+        System.out.println("ABC Class");
+    }
+    ABC(String a) {
+        System.out.println("Name:" + a);
+    }
+}
+
+class XYZ extends ABC {
+    XYZ() {
+        super("Amandeep");
+        System.out.println("XYZ Class");
+    }
+}
+
+public class useOfSuper {
+    public static void main(String[] args) {
+        XYZ obj1 = new XYZ();
+    }
+}
