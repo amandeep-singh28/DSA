@@ -49,3 +49,14 @@ public class constructorWorking {
         Hostel h1 = new Hostel("Hello");       
     }
 }
+
+
+->Method overriding and Method overloading
+(i)Method overriding
+-Same function name and same parameters.
+-Cannot be done in the same class.
+-It only happens when class inherits something(Inheritance).
+
+(ii)Method overloading
+-Same function name and different parameters.
+-Can be done in the same class.
