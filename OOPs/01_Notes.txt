@@ -260,3 +260,59 @@ public class useOfFinal {
         System.out.println(ABC.a);
     }
 }
+
+****Types of Inheritance in Java****
+-Java supports single, multilevel, and hierarchical inheritance with classes, while multiple and hybrid inheritance are achieved using interfaces.
+
+(i)Single level Inheritance
+One parent one child
+
+Example:-
+class A {
+
+}
+class B extends A {
+
+}
+
+(ii)MultiLevel Inheritance (Chain of inheritance)
+A class inherits from another class, and then a third class inherits from that child.
+
+Example:-
+class A {
+
+}
+class B extends A { 
+    
+}
+
+class C extends B { // Multi level Inheritance
+
+}
+
+(iii)Hierarchical Inheritance
+One parent and n childrens
+
+class A {
+
+}
+class B extends A { 
+    
+}
+
+class C extends A {
+
+}
+
+class D extends A { // Hierarchical Inheritance
+
+}
+
+(iv)Multiple Inheritance(Not with classes)
+It can be implemented with the interface but not with classes because of the diamond problem.
+Diamond problem states that it is possible that 2 parent can have the same method
+
+(v)Hybrid Inheritance (Not with classes)
+Same
+
+
