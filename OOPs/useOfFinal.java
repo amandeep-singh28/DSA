@@ -1,19 +1,19 @@
 package OOPs;
 
-class ABC {
-    final void display() {
-        System.out.println("ABC Class");
-    }
+final class ABC {
 }
 
+class PQR {
+
+}
 class XYZ extends ABC {
-    // void display() {
-    //     System.out.println("XYZ Class");
-    // }
+
+}
+class RST extends PQR {
+
 }
 public class useOfFinal {
     public static void main(String[] args) {
-        XYZ obj1 = new XYZ();
-        obj1.display();
+        
     }
 }
