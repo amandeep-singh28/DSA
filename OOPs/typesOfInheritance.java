@@ -7,7 +7,11 @@ class B extends A {
     
 }
 
-class C extends B { // Multi level Inheritance
+class C extends A {
+
+}
+
+class D extends A { // Hierarchical Inheritance
 
 }
 
