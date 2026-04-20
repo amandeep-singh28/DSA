@@ -162,3 +162,41 @@ public class useOfSuper {
         XYZ obj1 = new XYZ();
     }
 }
+
+->Uses of final keyword
+
+(i)Using final with a variable
+When we create a variable with final keyword, we cannot update the value of that variable.
+
+Example:-
+public class useOfFinal {
+    public static void main(String[] args) {
+        final int a = 10;
+        System.out.println(a);
+        a = 20; // It will throw an error(Compile Time Error)
+        System.out.println(a);
+    }
+}
+
+(ii)Using final along with methods
+It prevents overriding(Modification)
+A final method can be inherited but cannot be overridden because it prevents modification of behavior in child classes.
+
+Example:-
+class ABC {
+    final void display() {
+        System.out.println("ABC Class");
+    }
+}
+
+class XYZ extends ABC {
+    // void display() { // This will throw COMPILATION ERROR
+    //     System.out.println("XYZ Class");
+    // }
+}
+public class useOfFinal {
+    public static void main(String[] args) {
+        XYZ obj1 = new XYZ(); // But the method can be inherited in the base class
+        obj1.display();
+    }
+}
