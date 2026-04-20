@@ -1,19 +1,11 @@
 package OOPs;
 
-final class ABC {
-}
-
-class PQR {
-
-}
-class XYZ extends ABC {
-
-}
-class RST extends PQR {
-
+class ABC {
+    final static int a = 10;
 }
 public class useOfFinal {
     public static void main(String[] args) {
-        
+        // ABC.a = 20;
+        System.out.println(ABC.a);
     }
 }
