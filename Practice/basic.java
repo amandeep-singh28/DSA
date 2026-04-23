@@ -2,16 +2,15 @@ package Practice;
 
 
 public class basic {
-    public String toLowerCase(String s) {
-        StringBuilder sb = new StringBuilder();
-        int len1 = s.length();
-        for (int i = 0; i < len1; i++) {
-            char ch = s.charAt(i);
-            if (ch >= 'A' && ch <= 'Z') {
-                int element = ch + 32;
-                sb.append((char)element);
-            } else sb.append(ch);
+    public boolean detectCapitalUse(String word) {
+        int count = 0;
+        int length = word.length();
+        for (int i = 0; i < length; i++) {
+            char ch = word.charAt(i);
+            if (ch >= 'A' && ch <= 'Z') count++;
         }
-        return sb.toString();
+        if (count == length || count == 0) return true;
+        if (count == 1 && (word.charAt(0) >= 'A' && word.charAt(0) <= 'Z')) return true;
+        return false;
     }
 }
