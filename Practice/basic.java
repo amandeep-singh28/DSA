@@ -1,17 +1,18 @@
 package Practice;
 
+import java.util.Arrays;
+
 public class basic {
-    public int lengthOfLastWord(String s) {
-        int count = 0;
-        int length = s.length() - 1;
+    public boolean isAnagram(String s, String t) {
+        int len1 = s.length();
+        int len2 = t.length();
 
-        while (s.charAt(length) == ' ' && length >= 0) length--;
+        char[] str1 = s.toCharArray();
+        char[] str2 = t.toCharArray();
 
-        for (int i = length; i >= 0; i--) {
-            char ch = s.charAt(i);
-            if (ch != ' ') count++;
-            else break;
-        }
-        return count;
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+
+        return Arrays.equals(str1, str2);
     }
 }
