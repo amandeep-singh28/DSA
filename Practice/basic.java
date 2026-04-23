@@ -7,12 +7,20 @@ public class basic {
         int len1 = s.length();
         int len2 = t.length();
 
-        char[] str1 = s.toCharArray();
-        char[] str2 = t.toCharArray();
+        int[] freq = new int[256];
+        for (int i = 0; i < len1; i++) {
+            char ch = s.charAt(i);
+            freq[ch - 'a']++;
+        }
 
-        Arrays.sort(str1);
-        Arrays.sort(str2);
+        for (int i = 0; i < len2; i++) {
+            char ch = t.charAt(i);
+            freq[ch - 'a']--;
+        }
 
-        return Arrays.equals(str1, str2);
+        for (int element : freq) {
+            if (element != 0) return false;
+        }
+        return true;
     }
 }
