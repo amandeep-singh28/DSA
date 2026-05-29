@@ -1,0 +1,42 @@
+29-05-2026
+String Revision
+Revised String functions
+(i)charAt()
+(ii)indexOf()
+(iii)compareTo()
+(iv)contains()
+(v)startsWith()
+(vi)endsWith()
+(vii)toLowerCase()
+(viii)toUpperCase()
+(ix)concat()
+String a = "Amandeep"
+String b = "Singh"
+a.concat(b); // It will only return "Amandeep", because Strings are immutable in JAVA
+System.out.println(a.concat(b)) // Now it will print "AmandeepSingh"
+
+(x)substring(i)
+It gives the strings after ith index (including ith index)
+(xi)substring(i, j)
+i to j - 1
+
+- Java Interning
+Suppose we have decalred a string with a variable 'str1' and its value is "Hello". Now we have created a new literal 'str2' but with the same value "Hello". So, both 'str1' & 'str2' will point to the same value.
+If you want to avoid interning, use 'new' keyword.
+
+- Java StringBuilder
+Why?
+Because Strings are immutable which was leading to poor performance.
+Meaning??
+Suppose:
+a = "Hello"
+a += "Mello"
+It will create new objects in the string pool which causes extra memory usage and it is not efficient. The old objects will become unused later.
+
+(i)setCharAt(0, 'a') -> It will replace the old charater with the new character at a specific index
+(ii)append()
+(iii)insert(0, 'a) -> It will insert 'a' at 0 index
+(iv)deleteCharAt(<index>)
+(v)deleteCharAt(i, j) -> (j - 1)
+(vi)reverse()
+
