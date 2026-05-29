@@ -40,3 +40,12 @@ It will create new objects in the string pool which causes extra memory usage an
 (v)deleteCharAt(i, j) -> (j - 1)
 (vi)reverse()
 
+- Practice Questions:
+(i)Length of last word
+(ii)Valid Anagram
+Using two approaches:
+- Converting it into character array, then sorting the array using inbuilt sort
+- Using frequency logic
+(iii)To toLowerCase
+- Using toLowerCase
+- Using +32 logic, if the char is uppercase add +32 into it to convert it into lowercase
