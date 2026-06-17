@@ -35,3 +35,16 @@
 -Find if Path exists in graph (BFS-#1971)
 -Number of Islands (BFS-#200)
 -Is Graph Bipartite (BFS-#785)
+
+
+****17-06-2025****
+(i)Two Sum (#1)
+Brute Force & HashMap approach
+(ii)Contains duplicates (#217)
+Brute Force & HashSet approach
+(iii)Majority Element (#169)
+Brute Force & HashMap approach
+(iv)Remove duplicates from Sorted Array (#26 - inplace)
+Using two pointer approach
+(v)Move Zeroes(#283 - inplace)
+Using two pointer approach
