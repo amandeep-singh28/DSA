@@ -48,3 +48,11 @@ Brute Force & HashMap approach
 Using two pointer approach
 (v)Move Zeroes(#283 - inplace)
 Using two pointer approach
+
+****18-06-2026****
+(i)Best time to buy and sell stock(#121)
+Brute force & O(n)
+(ii)Running sum of 1D array(#1480)
+Prefix Sum
+(iii)Subarray sum equals k(#560)
+Brute force & Optimal Approach (Using Hashmap and Prefix sum)
