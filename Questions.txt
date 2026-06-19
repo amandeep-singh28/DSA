@@ -56,3 +56,7 @@ Brute force & O(n)
 Prefix Sum
 (iii)Subarray sum equals k(#560)
 Brute force & Optimal Approach (Using Hashmap and Prefix sum)
+
+****19-06-2026****
+Revised Window Functions
+Solved few Questions on leetcode related to Window Functions
